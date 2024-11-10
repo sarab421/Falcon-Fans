@@ -1,5 +1,11 @@
 /* Reset some default browser styles */
-body, h1, h2, h3, p, ul, li {
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
@@ -11,8 +17,6 @@ body {
     background-color: #f9f9f9;
 }
 
-
-
 .container {
     display: flex;
     flex-direction: column;
@@ -20,9 +24,10 @@ body {
     max-width: 1200px;
     margin: auto;
 }
-#header-container{
+
+#header-container {
     flex-direction: row;
-justify-content: space-between;
+    justify-content: space-between;
 }
 
 /* Header styles */
@@ -32,31 +37,18 @@ justify-content: space-between;
     padding: 1em 0;
 }
 
-/* First Row (Logo and Tagline) */
-.header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo h1 {
     font-size: 2.5em;
     margin: 0;
     padding-bottom: -10px;
     margin-bottom: -11px;
 }
-.logo p{
+
+.logo p {
     font-size: 14px;
 }
 
-.tagline p {
-    font-size: 1.2em;
-    margin: 0;
-    text-align: right;
-    max-width: 60%;  /* Adjust this for the desired length of the tagline */
-}
-
-/* Second Row (Navigation Links) */
+/* Navigation Styles */
 .main-navigation ul {
     list-style-type: none;
     display: flex;
@@ -165,4 +157,131 @@ justify-content: space-between;
     text-align: center;
     padding: 1em 0;
     margin-top: 2em;
+}
+
+/* Hamburger Menu Styles */
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+#displayit {
+    display: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .site-header {
+        padding: 1em 1.5em;
+    }
+
+    #displayit {
+        display: block;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    #header-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .logo p {
+        font-size: 0.9em;
+    }
+
+    .main-navigation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        background-color: #0055a4;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1000;
+        padding-top: 50px;
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+    }
+
+    .main-navigation ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-navigation a {
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    .nav-active .main-navigation {
+        transform: translateX(0);
+    }
+}
+
+/* Tablets (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 95%;
+    }
+
+    #header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    .logo p {
+        font-size: 1em;
+    }
+
+    .main-navigation ul {
+        flex-direction: row;
+        gap: 1.5em;
+    }
+
+    .main-navigation a {
+        font-size: 1.05em;
+    }
+}
+
+/* Desktops/Large Screens (901px and up) */
+@media (min-width: 901px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    #header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo h1 {
+        font-size: 2.5em;
+    }
+
+    .logo p {
+        font-size: 1.1em;
+    }
+
+    .main-navigation ul {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .main-navigation a {
+        font-size: 1.1em;
+    }
 }

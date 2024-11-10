@@ -7,12 +7,18 @@
     <!-- Link to the CSS stylesheet -->  
     <link rel="stylesheet" href="styles/main.css">  
     <!-- Link to FontAwesome for WhatsApp icon -->  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
-</head>  
-<body>  
-    <!-- Header section -->  
-
-<header class="site-header">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+  <script>
+        function toggleMenu() {
+            console.log("button clicked");
+            const mainNavigation = document.querySelector('.main-navigation');
+            mainNavigation.classList.toggle('nav-active');
+        }
+    </script>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="site-header">
         <div id="header-container" class="container">
             <!-- Logo and Title -->
             <div class="logo">
@@ -20,14 +26,22 @@
                 <p>Your premier destination for premium Falcon Fans.</p>
             </div>
 
-            <div class="main-navigation">
+            <!-- Hamburger Menu Button -->
+            <div id="displayit" onclick="toggleMenu()">
+                <img src="./images/menuIcon.png" alt="Menu" class="menu-icon">
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="main-navigation">
                 <ul>
                     <li><a href="#contact-us"><i class="fa fa-phone"></i> Contact Us</a></li>
                     <li><a href="#prices"><i class="fa fa-tag"></i> Prices</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
+
+
  
 
 
