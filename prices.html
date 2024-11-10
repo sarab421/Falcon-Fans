@@ -1,25 +1,48 @@
 <!DOCTYPE html>  
 <html lang="en">  
-<head>  
+<>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Falcon Fans - Price List</title>  
     <!-- Link to the CSS stylesheet -->  
     <link rel="stylesheet" href="styles/prices.css">  
-</head>  
-<body>  
-    <!-- Note banner section -->  
+
+  <script>
+        function toggleMenu() {
+            console.log("button clicked");
+            const mainNavigation = document.querySelector('.main-navigation');
+            mainNavigation.classList.toggle('nav-active');
+        }
+    </script>
+</head>
+<body>
+      <!-- Note banner section -->  
     <div class="note-banner">  
         <p>The prices may fluctuate. Please contact us to get the exact price.</p>  
     </div>  
+    <!-- Header section -->
+    <header class="site-header">
+        <div id="header-container" class="container">
+            <!-- Logo and Title -->
+            <div class="logo">
+                <h1>Falcon Fans</h1>
+                <p>Your premier destination for premium Falcon Fans.</p>
+            </div>
 
-    <!-- Header section -->  
-    <header class="site-header">  
-        <div class="container">  
-            <h1>Falcon Fans</h1>  
-            <p>Check out our latest rate list.</p>  
-        </div>  
-    </header>  
+            <!-- Hamburger Menu Button -->
+            <div id="displayit" onclick="toggleMenu()">
+                <img src="./images/menuIcon.png" alt="Menu" class="menu-icon">
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="./contact-us.html"><i class="fa fa-phone"></i> Contact Us</a></li>
+                    <li><a href="./prices.html"><i class="fa fa-tag"></i> Prices</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Main content section -->  
     <main class="price-list">  

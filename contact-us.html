@@ -6,8 +6,38 @@
     <title>Contact Us - Falcon Fans</title>  
     <!-- Link to the CSS stylesheet -->  
     <link rel="stylesheet" href="styles/contact-us.css">  
-</head>  
-<body>  
+  <script>
+        function toggleMenu() {
+            console.log("button clicked");
+            const mainNavigation = document.querySelector('.main-navigation');
+            mainNavigation.classList.toggle('nav-active');
+        }
+    </script>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="site-header">
+        <div id="header-container" class="container">
+            <!-- Logo and Title -->
+            <div class="logo">
+                <h1>Falcon Fans</h1>
+                <p>Your premier destination for premium Falcon Fans.</p>
+            </div>
+
+            <!-- Hamburger Menu Button -->
+            <div id="displayit" onclick="toggleMenu()">
+                <img src="./images/menuIcon.png" alt="Menu" class="menu-icon">
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="./contact-us.html"><i class="fa fa-phone"></i> Contact Us</a></li>
+                    <li><a href="./prices.html"><i class="fa fa-tag"></i> Prices</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <!-- Header section -->  
     <header class="site-header">  
         <div class="container">  
